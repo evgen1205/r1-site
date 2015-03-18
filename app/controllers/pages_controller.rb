@@ -1,19 +1,23 @@
 class PagesController < ApplicationController
+
   def index
-	@sitename = 'Граффити (роспись стен) на заказ в Минске'
+	@title = 'Граффити на заказ в Минске'
 	@pagename = 'Сайт Rone One'
   end
 
   def works
+	@title = 'Работы | Граффити на заказ в Минске'
 	@pagename = 'Работы Rone One'
   end
 
   def info
-	@pagename = 'Информация'
+	@title = 'Информация | Граффити на заказ в Минске'
+	@pagename = 'Художник- Вадим Богдан'
   end
 
-  def news
-	@pagename = 'Свежие новости'
+  def sketches
+	@title = 'Эскизы | Граффити на заказ в Минске'
+	@pagename = 'Эскизы Rone One'
   end
 
 end

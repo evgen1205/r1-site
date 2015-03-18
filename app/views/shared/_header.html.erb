@@ -1,9 +1,11 @@
-<div id="logo"><%= image_tag 'logo.jpg', height: 100, alt: 'R1 logo' %></div><h1><%= @sitename %></h1>
-<nav class="navbar navbar-inverse">
+<div id="logo"><%= image_tag 'logo.jpg', height: 100, alt: 'R1 logo' %></div><h2 class="sitename">Граффити (роспись стен) на заказ в Минске</h2>
+<nav class="navbar menu">
   <ul class="nav navbar-nav">
-    <li><%= link_to 'index', root_path %></li>
-    <li><%= link_to 'works', works_path %></li>
-    <li><%= link_to 'info', info_path %></li>
-    <li><%= link_to 'news', news_path %></li>
+    <li><%= link_to 'Главная', root_path %></li>
+    <li><%= link_to 'Работы', works_path %></li>
+    <li><%= link_to 'Эскизы', sketches_path %></li>
+    <li><%= link_to 'Информация', info_path %></li>
+    <li><%= link_to 'Отзывы', testimonials_path %></li>
+    <li><%= link_to 'Новости', posts_path %></li>
   </ul>
 </nav>

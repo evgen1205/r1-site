@@ -2,13 +2,19 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  get 'index' => 'pages#index'
-
   get 'works' => 'pages#works'
 
   get 'info' => 'pages#info'
 
-  get 'news' => 'pages#news'
+  get 'sketches' => 'pages#sketches'
+
+  resources:testimonials, only: [:index]
+
+  resources:posts, only: [:index]
+
+  resources:users, only: [:index]
+
+  #get 'testimonials' => 'testimonials#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
