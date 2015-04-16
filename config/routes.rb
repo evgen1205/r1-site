@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get 'sketches' => 'pages#sketches'
 
-  resources:testimonials, only: [:index]
+  resources:testimonials, only: [:index, :new, :show, :create]
 
   resources:posts, only: [:index]
 
