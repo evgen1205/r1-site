@@ -8,9 +8,17 @@ Rails.application.routes.draw do
 
   get 'sketches' => 'pages#sketches'
 
+  get 'mentor' => 'mentor#index'
+
+  controller :sessions do
+  get  'login' => :new
+  post 'login' => :create
+  delete 'logout' => :destroy
+  end
+
   resources:testimonials, only: [:index, :new, :show, :create]
 
-  resources:posts, only: [:index]
+  resources:posts, only: [:index, :new, :show, :create]
 
   resources:users, only: [:index]
 
