@@ -1,4 +1,9 @@
 <div class="page-header">
-    <p><%= @testimonial.user_name %></p>
+    <h4><%= @testimonial.user_name %></h4>
     <p><%= @testimonial.feedback %></p>
 </div>
+
+<% if session[:mentor_id] %>
+    <%= link_to 'delete', @testimonial, method: :delete, class: 'btn btn-danger',
+                data: { confirm: "You sure?" } %>
+<% end %>

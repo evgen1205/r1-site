@@ -1,4 +1,10 @@
 <div class="page-header">
-    <p><%= @post.name %></p>
+    <h4><%= @post.name %></h4>
     <q><%= @post.content %></q>
 </div>
+
+<% if session[:mentor_id] %>
+	<%= link_to "edit", edit_post_path(@post), class: 'btn btn-success' %>
+    <%= link_to 'delete', @post, method: :delete, class: 'btn btn-danger',
+                data: { confirm: "You sure?" } %>
+<% end %>

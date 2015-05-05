@@ -3,9 +3,7 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   get 'works' => 'pages#works'
-
   get 'info' => 'pages#info'
-
   get 'sketches' => 'pages#sketches'
 
   get 'mentor' => 'mentor#index'
@@ -16,13 +14,11 @@ Rails.application.routes.draw do
   delete 'logout' => :destroy
   end
 
-  resources:testimonials, only: [:index, :new, :show, :create]
+  resources:testimonials, only: [:index, :new, :show, :create, :destroy]
 
-  resources:posts, only: [:index, :new, :show, :create]
+  resources:posts
 
   resources:users, only: [:index]
-
-  #get 'testimonials' => 'testimonials#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
