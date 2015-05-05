@@ -67,6 +67,12 @@ article img{
 	color:inherit;
 }
 
+.works_container img{
+	height:130px;
+	margin:8px 14px 8px 0;
+	vertical-align:middle;
+}
+
 /*footer{
 	clear:both;
 	height:40px;
