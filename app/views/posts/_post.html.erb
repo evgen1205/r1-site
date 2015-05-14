@@ -1,7 +1,6 @@
-<a href="<%= post_path(post) %>" class="list-group-item">
-  <div>
-    <h3><%= post.name %></h3>
-    <div><%=raw post.content %></div>
+<div class="panel panel-default">
+  <h3><%= post.name %></h3>
+  <div><%= raw post.content %></div>
+<a href="<%= post_path(post) %>" class="list-group-item">Read</a>
+</div>
 
-  </div>
-</a>
