@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'courses' => 'courses#index'
+
+  get 'courses/show'
+
   root 'pages#index'
 
   get 'works' => 'pages#works'
@@ -9,9 +13,9 @@ Rails.application.routes.draw do
   get 'mentor' => 'mentor#index'
 
   controller :sessions do
-  get  'login' => :new
-  post 'login' => :create
-  delete 'logout' => :destroy
+    get  'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
   end
 
   resources:testimonials, only: [:index, :new, :show, :create, :destroy]

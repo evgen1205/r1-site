@@ -15,10 +15,13 @@ h1, h3{
 	margin:0 0 8px;
 	padding:10px 0 4px;
 	color:#8e1211;
-	border-bottom:1px solid #8e1211;
 }
 
 h3{
+	border:none;
+}
+
+.sidebar h3{
 	color:#d7736e;
 	border-bottom:1px solid #d7736e;
 }
@@ -40,10 +43,98 @@ h3{
 	padding:0 30px;
 	color:#de1514;
 }
+
+.menu li>a:hover{
+	background:inherit;
+}
+
 .menu a:hover{
 	color:#8e1211;
 	text-shadow:1px 0 0 #8e1211;
 }
+
+/*slider styles*/
+.slider{
+    height:360px;
+    width:700px;
+    margin:0 auto;
+    position:relative;
+}
+.slide_container{
+	width:600px;
+	height:330px;
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+}
+.slide_wrapper{
+	margin-left:-40px;
+    width:600px;
+    height:330px;
+    position:absolute;
+    left:0;
+    top:0;
+}
+.slide{
+	display:inline-block;
+	width:600px;
+	height:330px;
+	list-style:none;
+	float:left;
+}
+.caption{
+	display:block;
+	text-decoration:none;
+	background:#ddd;
+	font-size:14px;
+	line-height:26px;
+	width:100%;
+	color:#8e1211;
+	position:absolute;
+	bottom:0;
+	-moz-opacity:0.85;
+	opacity:0.85;
+	padding:2px 16px;
+}
+.button_container{
+    position:absolute;
+    bottom:0;
+    left:0;
+    padding:0 0 0 7%;
+}
+.slider_button{
+	display:inline-block;
+    width:14px;
+    height:14px;
+    -webkit-border-radius:7px;
+    -moz-border-radius:7px;
+    border-radius:7px;
+    margin-right:5px;
+    cursor:pointer;
+    background:#fefefe url(../images/buttons.png) -1px -1px;
+}
+.button_container a.active{
+    background:url(../images/buttons.png) -16px -1px;
+}
+.arrows{
+	position:absolute;
+	top:35%;
+	cursor:pointer;
+	width: 0;
+	height: 0;
+	border: 25px solid transparent;
+}
+#next_slide{
+	right:0;
+	border-left-color: #444;
+	border-right: 0;
+}
+#prev_slide{
+	left:0;
+	border-right-color:#444;
+	border-left:0;
+}
+/*slider styles end*/
 
 article img{
 	height:300px;
@@ -72,12 +163,34 @@ article img{
 	margin:8px 14px 8px 0;
 	vertical-align:middle;
 }
+/*overriding bootstrap*/
+.btn-default{
+	color:#8e1211;
+	border:1px solid #8e1211;
+}
+.btn-default:hover{
+	border:1px solid #8e1211;
+	color:#8e1211;
+}
 
-/*footer{
+.btn-primary{
+	background:#8e1211;
+	border:1px solid #8e3b3a;
+}
+.btn-primary:hover{
+	background:#8e3b3a;
+	border:1px solid #8e1211;
+}
+
+.panel h3{
+	border-color:transparent;
+}
+
+.footer{
 	clear:both;
 	height:40px;
 	line-height:40px;
 	background:#8e1211;
 	color:#fefefe;
 	padding:0 16px;
-}*/
+}
