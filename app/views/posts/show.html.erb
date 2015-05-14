@@ -1,6 +1,6 @@
 <div class="page-header">
     <h4><%= @post.name %></h4>
-    <q><%= @post.content %></q>
+    <q><%=raw @post.content %></q>
 </div>
 
 <% if session[:mentor_id] %>
