@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'puma'
 gem 'pg'
+gem "paperclip", "~> 4.2"
+gem 'fancybox-rails'
 
 group :production do
   #Heroku integration

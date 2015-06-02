@@ -1,0 +1,17 @@
+<h1><%= @pagename %></h1>
+<div class="works_container">
+  <%= image_tag 'thumbnails/thumb-myplace1.jpg', alt: 'rone one work' %>
+  <%= image_tag 'thumbnails/thumb-bowling-house.jpg', alt: 'rone one work' %>
+  <%= image_tag 'thumbnails/thumb-vinily-1.jpg', alt: 'rone one work' %>
+</div>
+<div>
+	<% if session[:mentor_id] %>
+
+<div class="panel panel-default">
+  <%= form_tag({action: :upload}, multipart: true) do %>
+	<%= file_field_tag 'picture' %>
+  <% end %>
+</div>
+
+<% end %>
+</div>

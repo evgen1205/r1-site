@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
 
+  get 'example/show'
+
   get 'courses' => 'courses#index'
 
   get 'courses/show'
 
   root 'pages#index'
 
-  get 'works' => 'pages#works'
+# get 'works' => 'pages#works'
   get 'info' => 'pages#info'
   get 'sketches' => 'pages#sketches'
 
@@ -21,8 +23,14 @@ Rails.application.routes.draw do
   resources:testimonials, only: [:index, :new, :show, :create, :destroy]
 
   resources:posts
+  resources:works, only: [:index, :show, :upload]
+
+  resource :example, only: [:show], controller: :example
+  #root to: "example#show"
 
   resources:users, only: [:index]
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
