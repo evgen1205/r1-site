@@ -29,6 +29,7 @@ gem 'pg'
 gem "paperclip", "~> 4.2"
 gem 'fancybox-rails'
 gem 'responders', '~> 2.0'
+gem 'will_paginate', '~> 3.0.6'
 
 group :production do
   #Heroku integration

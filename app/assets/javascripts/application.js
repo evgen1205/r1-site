@@ -19,4 +19,5 @@
 
 $(document).ready(function() {
   $("a.fancybox").fancybox();
+  console.log("fancybox plugged");
 });
