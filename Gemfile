@@ -28,6 +28,7 @@ gem 'puma'
 gem 'pg'
 gem "paperclip", "~> 4.2"
 gem 'fancybox-rails'
+gem 'responders', '~> 2.0'
 
 group :production do
   #Heroku integration

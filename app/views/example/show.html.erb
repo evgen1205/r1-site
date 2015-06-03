@@ -1,8 +1,16 @@
 <h1>Example#show</h1>
-<%= link_to "Show mah Fancybox!", "#hello", class: "fancybox" %>
+<%= link_to "Show mah Fancybox!", "#hello", class: "fancybox", :rel => 'group' %>
 
 <div style="display:none;">
   <div id="hello">
   Hello world!
+  </div>
+</div>
+
+<%= link_to "Show more Fancybox!", "#next", class: "fancybox", :rel => 'group' %>
+
+<div style="display:none;">
+  <div id="next">
+  Next slide!
   </div>
 </div>

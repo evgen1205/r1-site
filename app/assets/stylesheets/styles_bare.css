@@ -194,3 +194,19 @@ article img{
 	color:#fefefe;
 	padding:0 16px;
 }
+
+#fancybox-close{
+	right:-30px !important;
+}
+
+.read-more{
+	margin-top:10px !important;
+}
+
+.post a{
+	color:#de1514 !important;
+}
+
+.post a:hover{
+	color:#8e1211 !important;
+}

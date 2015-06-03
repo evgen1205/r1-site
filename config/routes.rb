@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
 # get 'works' => 'pages#works'
   get 'info' => 'pages#info'
-  get 'sketches' => 'pages#sketches'
+# get 'sketches' => 'pages#sketches'
 
   get 'mentor' => 'mentor#index'
 
@@ -20,13 +20,14 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy
   end
 
-  resources:testimonials, only: [:index, :new, :show, :create, :destroy]
+  resources:testimonials, only: [:index, :show, :create, :destroy]
 
   resources:posts
-  resources:works, only: [:index, :show, :upload]
+  resources:works, only: [:index, :show]
+
+  resources:sketches, only: [:index, :show]
 
   resource :example, only: [:show], controller: :example
-  #root to: "example#show"
 
   resources:users, only: [:index]
 

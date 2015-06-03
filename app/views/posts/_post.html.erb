@@ -1,6 +1,8 @@
 <div class="panel panel-default">
-  <h3><%= post.name %></h3>
-  <div><%= raw post.content %></div>
-<a href="<%= post_path(post) %>" class="list-group-item">Read</a>
+	<div class="panel-body">
+		<h3><%= post.name %></h3>
+		<div class="post"><%= raw post.content %></div>
+		<a href="<%= post_path(post) %>" class="btn btn-primary read-more">Read more</a>
+	</div>
 </div>
 
